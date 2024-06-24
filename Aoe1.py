@@ -85,6 +85,7 @@ mapas = [
 if sl.button('Iniciar Juego'):
     sl.write('Juego iniciado')
     num_jugadores = sum(int(n) for n in modo_juego if n.isdigit())
+    random.shuffle(nombres_jugadores)
 
     # Verificar si el número de jugadores excede el máximo global permitido
     if num_jugadores > 8:
